@@ -1,25 +1,35 @@
-## Most expensive jewellery
+## Total price of groceries 
 
 ##### Your Task 📚:
 
-You go to a jewelry shop and try to find the most expensive piece of jewelry. You write down the name of each piece of jewelry and its price.
+Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price, for example:
 
-Create a function that gets the name of the piece of jewelry with the highest price and returns `The most expensive one is the {name of jewelry piece}`.
+```
+{
+  "product": "Milk",
+  "quantity": 1,
+  "price": 1.50
+}
+```
 
 ##### Examples 😃:
 
 ```
-mostExpensive ({
-  "Diamond Earrings": 980,
-  "Gold Watch": 250,
-  "Pearl Necklace": 4650
-}) ➞  "The most expensive one is the Pearl Necklace"
+// 1 bottle of milk:
+getTotalPrice([
+  { product: "Milk", quantity: 1, price: 1.50 }
+]) ➞ 1.5
 
-mostExpensive({
-  "Silver Bracelet": 280,
-  "Gemstone Earrings": 180,
-  "Diamond Ring": 3500
-}) ➞ "The most expensive one is the Diamond Ring"
+// 1 bottle of milk & 1 box of cereals:
+getTotalPrice([
+  { product: "Milk", quantity: 1, price: 1.50 },
+  { product: "Cereals", quantity: 1, price: 2.50 }
+]) ➞ 4
+
+// 3 bottles of milk:
+getTotalPrice([
+  { product: "Milk", quantity: 3, price: 1.50 }
+]) ➞ 4.5
 ```
 
 Good Luck 😀
